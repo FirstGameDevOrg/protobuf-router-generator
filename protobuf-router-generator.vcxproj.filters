@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtobufRouterGenerator.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="socket.pb.cc">
+      <Filter>payload\proto</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{7d435e29-8ed0-4256-8270-7de3c96f19c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="payload">
+      <UniqueIdentifier>{6b0dc389-82a5-4ad8-9d70-829a554be181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{70cefaa2-6953-4aa4-9103-c97a1ac5d3a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{f8677c9b-ced7-4f40-a87d-ad87e9f8f964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{a7e50bd1-a6db-4501-9501-efb70d3c49fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="payload\proto">
+      <UniqueIdentifier>{70c714e8-f313-4939-ac5c-4a9a868f5247}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MessageWrapper.hpp">
+      <Filter>payload</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.pb.h">
+      <Filter>payload\proto</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ProtobufRouterGenerator.h">
+      <Filter>include</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ProtobufRouterGenerator.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ProtobufRouterGenerator.qrc">
+      <Filter>res</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>
