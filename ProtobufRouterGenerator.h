@@ -13,12 +13,22 @@ public:
 
 	void loadProto(QString path);
 
-	static decltype(auto) regexSearch(QRegExp& regex, const QString& content, int index = 0) {
+	static inline decltype(auto) regexSearch(QRegExp& regex, const QString& content, const QList<int>& indexs = {}) {
 		QStringList machList{};
 		int pos = 0;
 		while ((pos = regex.indexIn(content, pos)) != -1) {
 			pos += regex.matchedLength();
-			machList += regex.capturedTexts().at(index);
+			if (indexs.IsEmpty())
+			{
+				machList += regex.capturedTexts();
+			}
+			else
+			{
+				for(auto index : indexs)
+				{
+					machList += regex.capturedTexts().at(index);
+				}
+			}
 		}
 		return machList;
 	};
