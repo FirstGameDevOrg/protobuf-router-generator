@@ -42,9 +42,15 @@ void ProtobufRouterGenerator::loadProto(QString path)
 	messageTypeList_.clear();
 	protoSyntax_ = "proto2";
 
-	protoSyntax_ = regexSearch(syntaxRegexp, content, 2).first();
-	protoPackage_ = regexSearch(packageRegexp, content, 2).first();
-	messageTypeList_ = regexSearch(messageRegexp, content, 2);
+	if (syntaxRegexp.indexIn(content)) != -1)
+	{
+		protoSyntax_ = syntaxRegexp.capturedTexts().last();
+	}
+	if (packageRegexp.indexIn(content)) != -1)
+	{
+		protoPackage_ = packageRegexp.capturedTexts().last();
+	}
+	messageTypeList_ = regexSearch(messageRegexp, content, {2});
 
 	ui.fileNameLabel->setText(QFileInfo(file).fileName());
 	ui.fileNameLabel->setToolTip(QFileInfo(file).fileName());
