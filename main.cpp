@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         , pb::socket::UserInfo
         , pb::socket::ExternalMessage
     >();
-    
+
     QApplication a(argc, argv);
     ProtobufRouterGenerator w;
     w.show();
