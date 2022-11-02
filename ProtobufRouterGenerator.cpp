@@ -103,7 +103,6 @@ ProtobufRouterGenerator::ProtobufRouterGenerator(QWidget *parent)
             }
             updateCodeViewer(row);
         });
-
 }
 
 ProtobufRouterGenerator::~ProtobufRouterGenerator()
