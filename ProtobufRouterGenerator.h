@@ -53,5 +53,4 @@ private:
     QString protoSyntax_{ "proto2" };
     QString protoPackage_{"pb"};
     QStringList messageTypeList_{};
-
 };
